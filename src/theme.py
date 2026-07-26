@@ -541,14 +541,14 @@ def sidebar_brand(p: Palette):
     """Branding block pinned to the top of the sidebar — no emoji, left-aligned."""
     st.markdown(
         f"""
-        <div style="display:flex; align-items:center; gap:10px; padding: 0 0 14px 0;">
+        <div style="display:flex; align-items:center; gap:10px; padding: 0 0 30px 0;">
             <div style="width:32px; height:32px; border-radius:9px; flex-shrink:0;
                         background: {p.gradient_primary};
                         display:flex; align-items:center; justify-content:center;
                         font-size:0.95rem; font-weight:800; color:white;
-                        box-shadow: 0 4px 14px rgba(124,58,237,0.4);">R</div>
+                        box-shadow: 0 4px 14px rgba(124,58,237,0.4);">C</div>
             <div style="text-align:left;">
-                <div style="font-weight:700; font-size:0.98rem; color:{p.text_primary}; line-height:1.15;">Revenue Forecast</div>
+                <div style="font-weight:700; font-size:0.98rem; color:{p.text_primary}; line-height:1.15;">CloudFlow</div>
                 <div style="font-size:0.7rem; color:{p.text_muted};">SaaS Insights Platform</div>
             </div>
         </div>
