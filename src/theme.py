@@ -210,9 +210,14 @@ def inject_css(p: Palette):
             min-width: 220px !important; max-width: 220px !important; width: 220px !important;
         }}
         /* bottom-pin the toggle by position, not flexbox — deterministic regardless of how
-           many wrapper divs Streamlit puts between the sidebar and the block-container */
-        section[data-testid="stSidebar"] .block-container {{
-            padding-top: 0.6rem; padding-bottom: 100px; animation: none;
+           many wrapper divs Streamlit puts between the sidebar and the content area.
+           Left/right padding is set explicitly (overriding Streamlit's own default) so
+           every element below — brand, nav buttons, toggle — can share one known inset
+           instead of each guessing at Streamlit's current internal box model. */
+        [data-testid="stSidebarContent"] {{
+            padding-top: 0.6rem !important; padding-bottom: 100px !important;
+            padding-left: 16px !important; padding-right: 16px !important;
+            animation: none;
         }}
         section[data-testid="stSidebar"] * {{ color: {p.text_primary}; text-align: left !important; }}
 
@@ -301,14 +306,17 @@ def inject_css(p: Palette):
         /* st.caption anywhere in the app (sidebar + main content) */
         [data-testid="stCaptionContainer"], [data-testid="stCaptionContainer"] * {{ color: {p.text_muted} !important; }}
 
+        /* Streamlit's default ~16px gap between sibling blocks in the sidebar (brand,
+           each nav item, the toggle) is what made nav spacing feel loose — collapse it
+           to a compact value here instead of fighting it with margins on every item. */
+        [data-testid="stSidebarUserContent"] [data-testid="stVerticalBlock"] {{ gap: 6px; }}
+
         /* nav items — force left alignment on every nested element Streamlit renders
            inside the button (its own base CSS otherwise centers button content) */
-        div[class*="st-key-navitem-"] {{ margin-bottom: 4px; }}
-        /* extra breathing room before Revenue Forecast — visually separates the two
-           core analytics pages (Overview/Dashboard) from forecast + roadmap modules,
-           which also pushes every item below it down the same amount */
-        div[class*="st-key-navitem-forecast"],
-        div[class*="st-key-navitem-active-forecast"] {{ margin-top: 20px; }}
+        /* small breathing room below Business Overview (the default/active item),
+           separating it from the rest of the nav list */
+        div[class*="st-key-navitem-dashboard"],
+        div[class*="st-key-navitem-active-dashboard"] {{ margin-top: 14px; }}
         div[class*="st-key-navitem-"] button {{
             width: 100%; text-align: left !important; border: 1px solid transparent; background: transparent;
             color: {p.text_secondary}; font-weight: 500; font-size: 0.88rem; border-radius: 10px; padding: 10px 12px;
@@ -323,7 +331,7 @@ def inject_css(p: Palette):
         }}
         div[class*="st-key-navitem-active"] button {{
             background: {p.gradient_primary} !important; color: white !important;
-            box-shadow: 0 4px 18px rgba(124,58,237,0.35); font-weight: 600;
+            box-shadow: 0 2px 6px rgba(124,58,237,0.25); font-weight: 600;
         }}
 
         /* theme toggle */
@@ -533,14 +541,14 @@ def sidebar_brand(p: Palette):
     """Branding block pinned to the top of the sidebar — no emoji, left-aligned."""
     st.markdown(
         f"""
-        <div style="display:flex; align-items:center; gap:10px; padding: 0 2px 14px 2px;">
+        <div style="display:flex; align-items:center; gap:10px; padding: 0 0 30px 0;">
             <div style="width:32px; height:32px; border-radius:9px; flex-shrink:0;
                         background: {p.gradient_primary};
                         display:flex; align-items:center; justify-content:center;
                         font-size:0.95rem; font-weight:800; color:white;
-                        box-shadow: 0 4px 14px rgba(124,58,237,0.4);">R</div>
+                        box-shadow: 0 4px 14px rgba(124,58,237,0.4);">C</div>
             <div style="text-align:left;">
-                <div style="font-weight:700; font-size:0.98rem; color:{p.text_primary}; line-height:1.15;">Revenue Forecast</div>
+                <div style="font-weight:700; font-size:0.98rem; color:{p.text_primary}; line-height:1.15;">CloudFlow</div>
                 <div style="font-size:0.7rem; color:{p.text_muted};">SaaS Insights Platform</div>
             </div>
         </div>
