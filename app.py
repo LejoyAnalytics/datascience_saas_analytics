@@ -44,6 +44,8 @@ PAGES = [
     ("about", "💼", "Business Overview"),
     ("dashboard", "📊", "Dashboard"),
     ("forecast", "📈", "Revenue Forecast"),
+    ("churn", "🔮", "Churn Prediction"),
+    ("anomaly", "🚨", "Anomaly Detection"),
 ]
 
 with st.sidebar:
@@ -68,6 +70,12 @@ if st.session_state.page == "dashboard":
 elif st.session_state.page == "forecast":
     import forecast
     forecast.render()
+elif st.session_state.page == "churn":
+    import coming_soon
+    coming_soon.render("Churn Prediction", "🔮", "Predict which customers are at risk of churning before it happens.")
+elif st.session_state.page == "anomaly":
+    import coming_soon
+    coming_soon.render("Anomaly Detection", "🚨", "Automatically flag unusual spikes or drops in revenue, usage, and churn metrics.")
 else:
     import about
     about.render()
