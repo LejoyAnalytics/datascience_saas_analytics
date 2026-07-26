@@ -331,7 +331,7 @@ def inject_css(p: Palette):
         }}
         div[class*="st-key-navitem-active"] button {{
             background: {p.gradient_primary} !important; color: white !important;
-            box-shadow: 0 4px 18px rgba(124,58,237,0.35); font-weight: 600;
+            box-shadow: 0 2px 6px rgba(124,58,237,0.25); font-weight: 600;
         }}
 
         /* theme toggle */
