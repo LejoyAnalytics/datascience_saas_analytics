@@ -316,7 +316,7 @@ def inject_css(p: Palette):
         /* small breathing room below Revenue Forecast, separating it from the rest of
            the nav list — Business Overview is first in that list (right after it) */
         div[class*="st-key-navitem-about"],
-        div[class*="st-key-navitem-active-about"] {{ margin-top: 14px; }}
+        div[class*="st-key-navitem-active-about"] {{ margin-top: 32px; }}
         div[class*="st-key-navitem-"] button {{
             width: 100%; text-align: left !important; border: 1px solid transparent; background: transparent;
             color: {p.text_secondary}; font-weight: 500; font-size: 0.88rem; border-radius: 10px; padding: 10px 12px;
