@@ -267,14 +267,13 @@ def inject_css(p: Palette):
            chance of the visible pill and the clickable element drifting apart).
            State-dependent colors come from a container key that changes between
            "theme-toggle-day" / "theme-toggle-night" each rerun. */
-        /* left+right (not right alone) so the wrap's own width is pinned to the sidebar's
-           inner width, then flex justify-content pushes its child to the right edge —
-           setting only `right` left it visually stuck on the left, since the wrap
-           inherits Streamlit's default full-width block sizing and the button inside
-           wasn't told to align to the wrap's own right side. */
+        /* left+right (not left alone) so the wrap's own width is pinned to the sidebar's
+           inner width — the wrap inherits Streamlit's default full-width block sizing,
+           so without an explicit `right` too the button inside has no defined edge to
+           align against. justify-content then pins the pill to the wrap's left edge. */
         div[class*="st-key-theme-toggle-wrap"] {{
             position: absolute; left: 16px; right: 4px; bottom: 16px;
-            display: flex; justify-content: flex-end;
+            display: flex; justify-content: flex-start;
         }}
         div[class*="st-key-theme-toggle-day"] [data-testid="stButton"],
         div[class*="st-key-theme-toggle-night"] [data-testid="stButton"] {{ width: fit-content; }}
@@ -305,6 +304,11 @@ def inject_css(p: Palette):
         /* nav items — force left alignment on every nested element Streamlit renders
            inside the button (its own base CSS otherwise centers button content) */
         div[class*="st-key-navitem-"] {{ margin-bottom: 4px; }}
+        /* extra breathing room before Revenue Forecast — visually separates the two
+           core analytics pages (Overview/Dashboard) from forecast + roadmap modules,
+           which also pushes every item below it down the same amount */
+        div[class*="st-key-navitem-forecast"],
+        div[class*="st-key-navitem-active-forecast"] {{ margin-top: 20px; }}
         div[class*="st-key-navitem-"] button {{
             width: 100%; text-align: left !important; border: 1px solid transparent; background: transparent;
             color: {p.text_secondary}; font-weight: 500; font-size: 0.88rem; border-radius: 10px; padding: 10px 12px;
