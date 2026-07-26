@@ -35,15 +35,15 @@ st.set_page_config(
 if "theme_mode" not in st.session_state:
     st.session_state.theme_mode = "dark"
 if "page" not in st.session_state:
-    st.session_state.page = "forecast"
+    st.session_state.page = "about"
 
 palette = get_palette()
 inject_css(palette)
 
 PAGES = [
-    ("forecast", "📈", "Revenue Forecast"),
     ("about", "💼", "Business Overview"),
     ("dashboard", "📊", "Dashboard"),
+    ("forecast", "📈", "Revenue Forecast"),
     ("churn", "🔮", "Churn Prediction"),
     ("anomaly", "🚨", "Anomaly Detection"),
 ]
