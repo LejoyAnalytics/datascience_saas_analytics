@@ -424,8 +424,10 @@ def inject_css(p: Palette):
             color: {p.text_primary} !important;
         }}
         [data-baseweb="select"] svg {{ fill: {p.text_muted} !important; }}
-        div[data-baseweb="popover"] [data-baseweb="menu"] {{ background: {p.surface} !important; }}
-        div[data-baseweb="popover"] li {{ color: {p.text_primary} !important; }}
+        div[data-baseweb="popover"] [data-baseweb="menu"],
+        [data-testid="stSelectboxVirtualDropdown"] {{ background: {p.surface} !important; }}
+        div[data-baseweb="popover"] li,
+        [data-testid="stSelectboxVirtualDropdown"] li * {{ color: {p.text_primary} !important; }}
         [data-baseweb="tag"] {{ background: {p.accent_blue} !important; }}
         [data-baseweb="tag"] span, [data-baseweb="tag"] svg {{ color: white !important; fill: white !important; }}
 
