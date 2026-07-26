@@ -20,6 +20,10 @@ DB_USER = os.getenv("DB_USER", "root")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "")
 DB_NAME = os.getenv("DB_NAME", "saas_revenue_forecast")
 
+# Managed MySQL providers (TiDB Cloud, PlanetScale, ...) require TLS; local
+# XAMPP does not support it at all, so this must stay opt-in via env var.
+DB_SSL = os.getenv("DB_SSL", "false").lower() in ("1", "true", "yes")
+
 
 def _url(database: str | None = None) -> str:
     db = database if database is not None else DB_NAME
@@ -27,13 +31,17 @@ def _url(database: str | None = None) -> str:
     return f"mysql+pymysql://{auth}@{DB_HOST}:{DB_PORT}/{db}"
 
 
+def _connect_args() -> dict:
+    return {"ssl": {}} if DB_SSL else {}
+
+
 def get_server_engine() -> Engine:
     """Engine with no database selected — used only to create the database itself."""
-    return create_engine(_url(database=""), isolation_level="AUTOCOMMIT")
+    return create_engine(_url(database=""), isolation_level="AUTOCOMMIT", connect_args=_connect_args())
 
 
 def get_engine() -> Engine:
-    return create_engine(_url(), pool_pre_ping=True)
+    return create_engine(_url(), pool_pre_ping=True, connect_args=_connect_args())
 
 
 def ensure_database_exists() -> None:
