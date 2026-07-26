@@ -1,0 +1,61 @@
+customer_id,customer_name,industryregion,customer_segment,acquisition_date
+CUST1053,Ivory Technologies,Real Estate - Europe,Startup,2021-01-17
+CUST1027,Apex Digital,Healthcare - Asia Pacific,SMB,2021-01-20
+CUST1002,Summit Solutions,Education - Europe,Startup,2021-03-23
+CUST1039,Lumen Works,Manufacturing - Latin America,SMB,2021-05-21
+CUST1026,Clear Networks,Real Estate - North America,Mid-Market,2021-05-29
+CUST1032,Nova Systems,Healthcare - Middle East & Africa,Mid-Market,2021-05-31
+CUST1004,Xenon Labs,Real Estate - North America,SMB,2021-06-17
+CUST1031,Crimson Dynamics,Healthcare - Latin America,Enterprise,2021-07-24
+CUST1059,Delta Dynamics,Healthcare - Latin America,SMB,2021-08-01
+CUST1019,Jade Labs,Logistics - North America,Enterprise,2021-09-26
+CUST1037,Echo Analytics,Media & Entertainment - Europe,SMB,2021-09-29
+CUST1043,Silver Digital,Retail - North America,Enterprise,2021-11-20
+CUST1012,Summit Analytics,Technology - North America,Enterprise,2022-02-23
+CUST1034,Granite Labs,Real Estate - Middle East & Africa,SMB,2022-03-13
+CUST1016,Prism Works,Finance - Latin America,Enterprise,2022-05-04
+CUST1040,Falcon Industries,Education - Latin America,SMB,2022-05-16
+CUST1011,Xenon Networks,Manufacturing - Middle East & Africa,SMB,2022-06-19
+CUST1017,Echo Solutions,Technology - Asia Pacific,SMB,2022-06-28
+CUST1036,Orbit Networks,Logistics - Middle East & Africa,SMB,2022-06-28
+CUST1042,Nova Partners,Healthcare - Europe,Mid-Market,2022-08-07
+CUST1057,Cobalt Dynamics,Real Estate - Latin America,Mid-Market,2022-09-06
+CUST1022,Kinetic Partners,Finance - Asia Pacific,Enterprise,2022-09-07
+CUST1048,Bright Technologies,Healthcare - North America,SMB,2022-09-12
+CUST1015,Silver Dynamics,Manufacturing - Latin America,Startup,2022-10-06
+CUST1010,Yield Technologies,Real Estate - Middle East & Africa,Mid-Market,2022-10-10
+CUST1024,Quantum Dynamics,Logistics - North America,SMB,2022-10-10
+CUST1038,Lumen Solutions,Logistics - Europe,SMB,2022-12-16
+CUST1041,Echo Dynamics,Logistics - Latin America,Mid-Market,2023-01-27
+CUST1018,Falcon Ventures,Logistics - Europe,Startup,2023-03-22
+CUST1005,Anchor Networks,Technology - North America,SMB,2023-05-09
+CUST1044,Cobalt Solutions,Education - North America,SMB,2023-06-17
+CUST1023,Delta Ventures,Finance - Middle East & Africa,Enterprise,2023-07-26
+CUST1028,Granite Studio,Manufacturing - Europe,Startup,2023-07-28
+CUST1035,Summit Studio,Finance - Asia Pacific,Mid-Market,2023-11-03
+CUST1009,Beacon Systems,Media & Entertainment - Middle East & Africa,Enterprise,2023-12-07
+CUST1052,Falcon Partners,Retail - Asia Pacific,SMB,2023-12-20
+CUST1033,Summit Ventures,Finance - Europe,Startup,2024-01-07
+CUST1046,Echo Industries,Retail - Middle East & Africa,Mid-Market,2024-01-18
+CUST1056,Delta Solutions,Real Estate - Europe,Startup,2024-02-10
+CUST1030,Lumen Partners,Hospitality - North America,Mid-Market,2024-02-28
+CUST1008,Summit Digital,Healthcare - Latin America,SMB,2024-03-03
+CUST1000,Clear Systems,Hospitality - Latin America,Mid-Market,2024-03-31
+CUST1007,Apex Technologies,Media & Entertainment - Middle East & Africa,SMB,2024-04-10
+CUST1001,Echo Technologies,Hospitality - Latin America,Mid-Market,2024-05-02
+CUST1049,Quantum Ventures,Retail - North America,Startup,2024-06-06
+CUST1003,Orbit Industries,Finance - Middle East & Africa,Enterprise,2024-06-22
+CUST1029,Cascade Studio,Technology - Europe,Startup,2024-06-26
+CUST1021,Orbit Works,Hospitality - Europe,SMB,2024-08-14
+CUST1051,Echo Labs,Healthcare - Middle East & Africa,Enterprise,2024-09-01
+CUST1006,Quantum Systems,Finance - Europe,Enterprise,2024-09-08
+CUST1058,Yield Digital,Retail - North America,Startup,2024-09-20
+CUST1054,Unity Networks,Logistics - Europe,Enterprise,2024-09-29
+CUST1013,Anchor Group,Logistics - Asia Pacific,Mid-Market,2024-10-03
+CUST1020,Apex Networks,Manufacturing - Middle East & Africa,SMB,2024-10-07
+CUST1047,Ivory Studio,Retail - North America,Enterprise,2024-12-11
+CUST1014,Nimbus Ventures,Education - North America,SMB,2025-01-06
+CUST1025,Solstice Digital,Hospitality - Asia Pacific,Mid-Market,2025-03-20
+CUST1050,Ivory Networks,Technology - Asia Pacific,SMB,2025-07-11
+CUST1055,Solstice Solutions,Hospitality - Middle East & Africa,Enterprise,2025-08-01
+CUST1045,Solstice Networks,Hospitality - Middle East & Africa,Enterprise,2025-09-04

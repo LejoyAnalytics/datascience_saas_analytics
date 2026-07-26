@@ -1,0 +1,18 @@
+customer_id,subscription_id,churn_date,churn_reason,mrr_lost
+CUST1053,SUB10002,2022-09-06,Poor support experience,40.83
+CUST1053,SUB10003,2024-09-19,Business closed,399.0
+CUST1027,SUB10004,2024-02-21,Poor support experience,832.5
+CUST1039,SUB10008,2021-09-25,Budget cuts,124.17
+CUST1032,SUB10012,2023-07-27,Low engagement / usage,399.0
+CUST1019,SUB10017,2022-11-20,Switched to competitor,49.0
+CUST1037,SUB10019,2025-02-04,Poor support experience,40.83
+CUST1012,SUB10023,2024-07-07,Price too high,124.17
+CUST1016,SUB10026,2023-05-28,Switched to competitor,149.0
+CUST1042,SUB10034,2022-12-29,Business closed,399.0
+CUST1048,SUB10037,2023-03-22,Budget cuts,999.0
+CUST1048,SUB10038,2025-05-01,Business closed,832.5
+CUST1041,SUB10044,2025-03-17,Low engagement / usage,49.0
+CUST1028,SUB10052,2024-08-02,Business closed,49.0
+CUST1035,SUB10053,2024-12-18,Business closed,999.0
+CUST1030,SUB10062,2024-11-12,Product no longer needed,332.5
+CUST1008,SUB10063,2024-06-14,Switched to competitor,40.83
